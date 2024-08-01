@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import ButtonComponet from '@/app/components/button';
 
 const fetchCategory = async (category: string) => {
   const res = await fetch(`https://fakestoreapi.com/products/category/${category}`);
@@ -21,7 +22,7 @@ async function CategoryName({ params }: {
           return (
             <div  key={item.id} className="rounded overflow-hidden shadow-lg">
               <div className="relative">
-                <Link href={`https://fakestoreapi.com/products/${item.id}`}>
+                <Link href={`/p/${item.id}`}>
                   <div className='relative pb-52'>
                     <Image
                       alt="Image Alt"
