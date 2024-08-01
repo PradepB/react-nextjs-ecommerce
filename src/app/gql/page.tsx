@@ -10,7 +10,7 @@ const GqlComponent = () => {
   if (error) return <p>Error: {error.message}</p>;
   return (
     <div>
-      <h2>User List</h2>
+      <h2>movie List</h2>
       <ul>
         {data?.allFilms?.films?.map(movie => (
           <li key={movie.title}>
